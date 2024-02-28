@@ -21,7 +21,7 @@ public class bingo {
             }
 
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println("valor inválido");
         }
     }
 }
