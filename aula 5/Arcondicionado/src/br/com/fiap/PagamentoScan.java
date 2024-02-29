@@ -2,33 +2,50 @@ package br.com.fiap;
 
 import java.util.Scanner;
 
-
+import Scanner;
 
 public class PagamentoScan {
 
     public static void main(String[] args) {
+
         Scanner scan;
         String aux;
-        double salario;
+        double salariobru, inss, planosaude, salarioliq;
+        int dependentes;
+        FolhaPagamento folha;
 
-        FolhaPagamento pagamento = new FolhaPagamento();
-        scan = new Scanner(System.in);
+        try {
+            
         
-        System.out.println("Digite o salário bruto: ");
-        pagamento.salarioBruto = scan.nextDouble();
 
-        System.out.println("Digite o valor do INSS: ");
-        pagamento.descontoINSS = scan.nextDouble();
+            folha = new FolhaPagamento();
+            scan = new Scanner(System.in);
+            
+            System.out.println("Digite o salário bruto: ");
+            salariobru = scan.nextDouble();
 
-        System.out.println("Digite o número de dependentes: ");
-        pagamento.numeroDeDependentes = scan.nextInt();
+            System.out.println("Digite o valor do INSS: ");
+            inss = scan.nextDouble();
 
-        System.out.println("Digite o valor do plano de saúde: ");
-        pagamento.planoSaude = scan.nextDouble();
+            System.out.println("Digite o número de dependentes: ");
+            dependentes = scan.nextInt();
 
-        salario = pagamento.calcularSalarioLiquido();
+            System.out.println("Digite o valor do plano de saúde: ");
+            planosaude = scan.nextDouble();
 
-        System.out.println(salario);
+            folha.descontoINSS = inss;
+            folha.salarioBruto = salariobru;
+            folha.planoSaude = planosaude;
+            folha.numeroDeDependentes = dependentes;
+            
+            folha.calcularSalarioLiquido();
+
+
+
+
+        } catch (Exception e) {
+            System.out.println("formato de numero incorreto");
+        }
         
     }
 
