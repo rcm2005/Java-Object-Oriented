@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TelevisiorEncapsulado {
+public class TelevisorEncapsulado {
 
     public int canal, volume;
 
@@ -75,14 +75,16 @@ public class TelevisiorEncapsulado {
         int opcao = 0;
 
         try {
+            
             scan = new Scanner(System.in);
             System.out.println("O que deseja ?");
             System.out.println("Definir novo canal ? - 1");
             System.out.println("Definir novo volume ? - 2");
             System.out.println("Aumentar o volume ?- 3 ");
             System.out.println("Diminuir o volume ? - 4");
+            System.out.println("Digite 0 para fechar o programa");
             opcao = scan.nextInt();
-            scan.close();
+
             
 
         } catch (Exception e) {
