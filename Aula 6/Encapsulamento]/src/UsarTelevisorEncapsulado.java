@@ -8,9 +8,10 @@ public class UsarTelevisorEncapsulado {
 
         TelevisorEncapsulado tv = new TelevisorEncapsulado();
         
-        opcao = tv.menu();
+
 
         do{
+            opcao = tv.menu();
             if (opcao == 1){
                 scan = new Scanner(System.in);
                 System.out.println("Qual canal gostaria de definir ?");
@@ -25,6 +26,9 @@ public class UsarTelevisorEncapsulado {
                 tv.aumentaVolume();
             }else if (opcao == 4){
                 tv.diminuirVolume();
+            }
+            if (opcao !=0){
+                System.out.println("Volume: " + tv.volume + " Canal: " + tv.canal);
             }
         } while(opcao != 0);
     

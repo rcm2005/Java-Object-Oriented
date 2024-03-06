@@ -30,7 +30,7 @@ public class TelevisorEncapsulado {
 
     public void setCanal(int canal){
         try {
-            if (canal < 0){
+            if (canal > 0){
                 this.canal = canal;
             }
         } catch (Exception e) {
@@ -59,8 +59,8 @@ public class TelevisorEncapsulado {
 
     public void diminuirVolume(){
         try {
-            if (volume <= 0){
-                volume ++;
+            if (volume >= 0){
+                volume --;
             }else{
                 System.out.println("O volume não pode ser menor do que 0");
             }    
@@ -78,14 +78,13 @@ public class TelevisorEncapsulado {
             
             scan = new Scanner(System.in);
             System.out.println("O que deseja ?");
-            System.out.println("Definir novo canal ? - 1");
-            System.out.println("Definir novo volume ? - 2");
-            System.out.println("Aumentar o volume ?- 3 ");
-            System.out.println("Diminuir o volume ? - 4");
+            System.out.println("Definir novo canal - 1");
+            System.out.println("Definir novo volume - 2");
+            System.out.println("Aumentar o volume - 3 ");
+            System.out.println("Diminuir o volume - 4");
             System.out.println("Digite 0 para fechar o programa");
             opcao = scan.nextInt();
 
-            
 
         } catch (Exception e) {
             System.out.println("Por favor digite uma opção válida");
