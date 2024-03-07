@@ -70,4 +70,5 @@ public class ArCondicionadoEncapsulado {
     public void mostrar(){
         System.out.println("a temperatua esta em: " + temperatura +" e o modo é: " + modo );
     }
+
 }
