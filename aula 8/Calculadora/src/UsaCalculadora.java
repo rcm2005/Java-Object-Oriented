@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class UsaCalculadora {
     public static void main(String[] args) {
         
-        int aux, um, dois;
+        int aux; 
         Scanner scan;
         scan = new Scanner(System.in);
 
@@ -30,7 +30,7 @@ public class UsaCalculadora {
             System.out.println("digite os dois números");
             calc.divisao(scan.nextInt(), scan.nextInt());
         }
-
+        
 
 
 
