@@ -12,7 +12,10 @@ public class Gestante {
 
     Gestante(){}
 
-    Gestante(String nome, LocalDate dataD){};
+    Gestante(String nome, LocalDate dataD){
+        this.nome = nome;
+        setDataDaGestacao(dataD);
+    };
 
     //getters & setters
 
@@ -61,7 +64,7 @@ public class Gestante {
 
 
         return auxi;
-        
+
         
 
 
