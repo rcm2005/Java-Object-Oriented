@@ -2,10 +2,18 @@ package br.com.fiap.main;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
+import br.com.fiap.bean.Quadrado;
+import br.com.fiap.bean.Retangulo;
+
 public class CalculaArea {
     public static void main(String[] args) {
         
-        int aux;
+        int opcao;
+        String auxs;
+        float lado, altura, area;
+
 
         Scanner scan = new Scanner(System.in);
 
@@ -16,10 +24,33 @@ public class CalculaArea {
         System.out.println("      2 - Area Retangulo");
         System.out.println("      3 - Area Triângulo");
         System.out.println("-------------------------------");
-        aux = scan.nextInt();
+        opcao = scan.nextInt();
 
-        if (aux == 1){
-            System.out.println();
+
+        switch (opcao) {
+            case 1:
+                Quadrado quad;
+
+
+                auxs = JOptionPane.showInputDialog("Por favor digite um valor para o lado: ");
+                lado = Float.parseFloat(auxs);
+                quad = new Quadrado(lado);
+                area = quad.calcularArea();
+                JOptionPane.showMessageDialog(null, "a área do quadrado é " + area);
+                break;
+            case 2:
+                Retangulo ret;
+
+                auxs = JOptionPane.showInputDialog("Por favor digite o lado do retângulo: ");
+                lado = Float.parseFloat(auxs);
+                auxs = JOptionPane.showInputDialog("Por favor digite a altura do retângulo");
+                altura = Float.parseFloat(auxs);
+                ret
+                    
+                
+                break;
+            default:
+                break;
         }
     }
     

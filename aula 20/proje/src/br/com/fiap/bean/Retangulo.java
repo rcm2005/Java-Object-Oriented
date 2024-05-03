@@ -13,6 +13,12 @@ public class Retangulo extends Quadrado {
         this.altura = altura;
     }
 
+    //getters & setters
+
+    public float getAltura() {
+        return altura;
+    }
+
     public float calcularArea(){
         float area = super.getLado() *altura;
 
