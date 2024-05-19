@@ -45,7 +45,9 @@ public class CalculaArea {
                 lado = Float.parseFloat(auxs);
                 auxs = JOptionPane.showInputDialog("Por favor digite a altura do retângulo");
                 altura = Float.parseFloat(auxs);
-                ret
+                ret = new Retangulo(altura);
+                System.out.println(ret.calcularArea());
+                
                     
                 
                 break;
