@@ -28,7 +28,7 @@ public class Usaequipe {
                 }
                 
                 grupo = new Equipe(nome, integrantes);
-                grupo.listaEquipe();
+                grupo.listaEquipe(nome, integrantes);
                 escolha = JOptionPane.showInputDialog(null,"Deseja continuar ?");
 
 

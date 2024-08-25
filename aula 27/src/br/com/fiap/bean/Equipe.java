@@ -6,17 +6,17 @@ import java.util.Collections;
 import javax.swing.JOptionPane;
 
 public class Equipe {
-    
     private String nome;
     private ArrayList<String> integrantes;
 
-    public Equipe(){
 
-    }
+    // declaração de construtores
+    public Equipe(){}
 
+    // declaração de getters e setters
     public Equipe(String nome, ArrayList<String> integrantes){
-        this.nome = nome;
         this.integrantes = integrantes;
+        this.nome = nome;
     }
 
     public ArrayList<String> getIntegrantes() {
@@ -27,30 +27,26 @@ public class Equipe {
         return nome;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
     public void setIntegrantes(ArrayList<String> integrantes) {
         this.integrantes = integrantes;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-
-
-
-
-    public void listaEquipe(String nome, ArrayList<String> integrantes){
-        String exibe = "nome da equipe" + nome;
-        Collections.sort(integrantes);
+    public void listaEquipe(){
+        String exibe = "nome da equipe: " + nome + "\n";
+        Collections.soet(integrantes);
         int cont = 1;
-        for (String i : integrantes){
-            exibe += "\nIntegrante " + cont + ": " + i;
+        for (string i: integrantes){
+            exibe += "integrante" + cont + ":" + i + "\n";
             cont++;
         }
         JOptionPane.showMessageDialog(null, exibe);
+
+
+        // JOptionPane.showMessageDialog(null, integrantes, nome, 0);         #jeito curto, seco e direto de fazer
     }
-
-
-
     
+
 }

@@ -6,7 +6,7 @@ public class PokedexPraticando {
             do {
                 
             } while ();
-            pikomon 
+            
         } catch (Exception e) {
             // TODO: handle exception
         }
