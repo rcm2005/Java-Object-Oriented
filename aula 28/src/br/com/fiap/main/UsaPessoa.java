@@ -5,7 +5,40 @@ import java.awt.*;
 
 
 public class UsaPessoa {
+
     public static void main(String[] args) {
+
+
+        JFrame frame = new JFrame("Registro de pessoa");
+
+        frame.setSize(800, 600);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(new BorderLayout());
+
+        JPanel panel = new JPanel();
+
+        panel.setLayout(new GridLayout(3,2));
+
+        JLabel instruction = new JLabel("digite algo: ");
+        JTextField input = new JTextField();
+        JButton button = new JButton("Registrar pessoa");
+
+        panel.add(instruction);
+        panel.add(input);
+        panel.add(button);
+
+        
+        frame.add(panel);
+
+        
+
+
+
+        /**
+         * Exemplo de aplicação de interface em java swing
+         * 
+         * 
+         */
         
         JFrame frame = new JFrame("Registrar pessoa");
 
