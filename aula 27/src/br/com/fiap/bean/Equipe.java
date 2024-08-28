@@ -36,9 +36,9 @@ public class Equipe {
 
     public void listaEquipe(){
         String exibe = "nome da equipe: " + nome + "\n";
-        Collections.soet(integrantes);
+        Collections.sort(integrantes);
         int cont = 1;
-        for (string i: integrantes){
+        for (String i: integrantes){
             exibe += "integrante" + cont + ":" + i + "\n";
             cont++;
         }
