@@ -12,8 +12,9 @@ public class TesteCreate {
         Carro carro = new Carro();
         CarroDAO carroDAO = new CarroDAO(con);
         carro.setPlaca("jdk1900");
-        carro.setCor("Vermelho");
+        carro.setCor("Preto");
         carro.setDescricao("Hellcat");
+        carro.setAno(1800);
         System.out.println(carroDAO.inserir(carro));
         ConnectionFactory.fecharConexao(con);
     }

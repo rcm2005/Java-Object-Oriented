@@ -19,11 +19,12 @@ public class CarroDAO {
     }
 
     public String inserir(Carro carro){
-        String sql = "insert into ddd_carro(placa,cor,descricao) values(?,?,?)";
+        String sql = "insert into ddd_carro(placa,cor,descricao,ano) values(?,?,?,?)";
         try (PreparedStatement ps = getCon().prepareStatement(sql);){
             ps.setString(1,carro.getPlaca());
             ps.setString(2, carro.getCor());
             ps.setString(3,carro.getDescricao());
+            ps.setInt(4, carro.getAno());
 
             if (ps.executeUpdate() > 0){
                 return "Inserido com sucesso";
